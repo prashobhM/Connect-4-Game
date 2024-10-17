@@ -4,7 +4,7 @@ import '../Game.css';
 import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { isDraw, isWinner, getRandomMove } from "../helper";
+import { isDraw, isWinner, getComputerMove } from "../helper";
 import {
     Game_state_Draw,
     Game_state_Playing,
@@ -36,7 +36,7 @@ const GameBoard = () =>{
 
     
     const suggestMove=()=>{
-        circleClicked(getRandomMove(gameBoard));
+        circleClicked(getComputerMove(gameBoard));
     }
 
     const initBoard=()=>{
